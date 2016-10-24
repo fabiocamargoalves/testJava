@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets" 
+	  xmlns:f="http://java.sun.com/jsf/core" 
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+	  xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</h:head>
+	<body>
+		<h:form>
+			<p:panel header="NEW PERMISSION" style="width:60%">
+				 <h:panelGrid columns="2" cellpadding="5">
+			        <p:outputLabel value="Name: " />
+			        <p:inputText id="name" value=""/>
+			 
+			        <p:outputLabel value="Description:" />
+			        <p:inputText id="description" value=""/>
+			     </h:panelGrid>
+				<p:panel style="width:100%;text-align: right;border:0;">
+					<p:growl id="growl" life="2000" />
+					<p:commandButton value="Back" id="back2" update="growl" action="#{navigationBean.gotoPermissionList}" immediate="true" ajax="false" />
+					<p:spacer width="25"/>
+					<p:commandButton type="button" value="Save New Permission" immediate="true" />	
+				</p:panel>
+			</p:panel>
+		</h:form>
+	</body>
+</html>
